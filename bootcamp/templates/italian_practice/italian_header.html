@@ -1,0 +1,100 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="description" content="Practice conjugating Italian verbs.">
+  <meta name="keywords" content="Italian verbs, verb conjugation, learn Italian, conjugation practice, Italian conjugation game, conjugation game">
+  <meta name="robots" content="index, follow">
+  <title>ItalianArcade</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+
+</head>
+
+<body>
+  <div class="hero_area_only_header">
+    <!-- header section strats -->
+    <header class="header_section_black">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="#">
+            <img src="{% static 'images/ia_logo_small.png' %}" alt="" />
+            <span style="font-family: 'Karmatic Arcade'; font-size: .5em;">
+              Italian Arcade
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  ">
+              <li class="nav-item active">
+                <a class="nav-link" href="/italian_conjugation">Conjugation Game<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="/under_construction">Pronoun Game<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="/under_construction">Vocabulary Game<span class="sr-only">(current)</span></a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div class="custom_menu-btn ">
+              <button>
+                <span class=" s-1">
+
+                </span>
+                <span class="s-2">
+
+                </span>
+                <span class="s-3">
+
+                </span>
+              </button>
+            </div>
+          </div>
+
+        </nav>
+      </div>
+    </header>
+  </div>
+
+  <div id="fixed-div" class="fixed-div hidden">
+    <div class="blue_background_rounded">
+    <button class="navbar-toggler blue_background_rounded" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon-smaller"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="/italian_conjugation">Conjugation Game<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/italian_conjugation">Pronoun Game<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/italian_conjugation">Vocabulary Game<span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+         
+        </div>
+      </div>
+  </div>
+  <!-- end header section -->

@@ -1,0 +1,208 @@
+{% load static %}
+{% include "italian_practice/italian_header.html" %} 
+  <div class="retro-grid"> 
+  <!-- <section class="arcade_section layout_padding_game">
+    <div class="container ">
+      <div class="heading_container btn-box-general">
+        <game_font>
+          The Conjugation Game
+        </game_font>
+      </div>
+    </div>
+  </section> -->
+
+  <div class="detail-box">
+    <div id="main-div" class="form-wrapper">
+      <div id="game-on-div"  class="form-content-arcade btn-box-general hidden">
+        <form id="conjugationForm" method="post">
+          {% csrf_token %}
+          <h2_bold_white id="tense" class="center-general glow-text">{{ tense }}</h2_bold_white>
+          <div class="center-general">
+            <h3_regular_arcade_glow><div id="subject">{{ subject }}</div></h3_regular_arcade_glow>
+            &nbsp;&nbsp;
+            <h3_regular_arcade_glow><div id="infinitive">{{ infinitive }}</div></h3_regular_arcade_glow>
+          </div>
+        <p></p>
+        
+        <div class="center-general-padding-s">
+          <div class="input-container">
+            <input id="answerInput" type="text" name="answer" placeholder="answer" maxlength="50">
+          </div>
+        </div>
+          <div id="message" class="center-general-toggle-hidden hidden">
+            <p></p>
+            <div class="center-general">
+            <div id="subject_answer" class="glow-text">{{ subject_answer }}</div>
+            <div id="subject_answer" class="glow-text">{{ subject_answer }}</div> 
+            <div id="participle" class="glow-text">{{ participle }}</div> 
+            <div id="auxillary" class="glow-text">{{ auxillary }}</div> 
+            <div id="verb" class="glow-text">{{ verb }}</div>
+          </div>
+        </div>
+        <div class="center-general-padding-s">
+          <button id="check" class="green-push-arcade-toggle-hidden" type="submit">
+            Enter ↵
+          </button>
+          <!-- <button id="try_again" class="green-push-arcade-toggle-hidden hidden" type="try_again">
+            Enter ↵
+          </button> -->
+        </div>
+        <div class="center-general-padding-s glow-text">
+          <p id="player_score">Score: 0</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+          <p id="timer">Time Left:  2:00</p>
+        </div>
+        <!-- <div class="center-general-padding-s glow-text">
+          <p id="timer">Time Left:  2:00</p>
+        </div> -->
+      </form>
+      </div>
+      <div id="game-start-div" class="form-content-arcade btn-box-general">
+        
+        <div class="center-general-padding-s">
+          <div class="glow-text-title-fast">Verb Racer</div>
+        </div>
+        <div class="center-general-padding-s">
+        <div class="glow-text-medium">Points</div>
+        <ul class="rules-text">
+          <li>
+            <p class="rules-text">25 pts: Correct Pronoun</p>
+          </li>
+          <li>
+            <p class="rules-text">50 pts: Correct Auxiliary Verb</p>
+          </li>
+          <li>
+            <p class="rules-text">100 pts: Presente, Imperfetto</p>
+          </li>
+          <li>
+            <p class="rules-text">200 pts: Passato Prossimo, Futuro, Condizionale Presente, Congiuntivo Presente</p>
+          </li>
+          <li>
+            <p class="rules-text">300 pts: Condizionale Passato, Trapassato Prossimo, Congiuntivo Imperfetto, Futuro Anteriore</p>
+          </li>
+          <li>
+            <p class="rules-text">Note: currently when an auxiliary verb is necessary and can be either avere or essere depending on context, the game assumes the transitive form of the verb conjugation</p>
+          </li>
+        </ul>
+        
+        <div class="center-general-padding-s">
+          <p class="rules-text">Find a bug? (╯°□°）╯︵ ┻━┻</p>
+        </div>
+        
+        <div class="center-general-padding-s">
+          <p class="rules-text">Leave a comment below!</p>
+        </div>
+        </div>
+        <button id="start" class="green-push-arcade-toggle-hidden" type="submit">
+          Enter ↵
+        </button>
+      </div>
+      <div id="game-over-div" class="form-content-arcade btn-box-general hidden">
+        <div class="form-wrapper arcade-text fit-general-parent">
+          <div class="fit-general-child">
+        <form id="saveGameForm" method="post">
+            {% csrf_token %}
+            <div class="center-general">
+              <div class="glow-text-title">Game Over</div>
+            </div>
+            <p></p>
+            <div id="player_row" class="center-general">
+              <div id="player_score_final" class="glow-text-medium  padding-20px">{{ score }}</div>
+              <div id="initials-input-div" class="input-container padding-20px">
+                <input id="dynamic-initials-input" style="width: 70px;" type="text" placeholder="AAA" name="initials" maxlength="3">
+              </div>
+              <div id="saved_initials" class="glow-text-medium padding-20px hidden">{{ saved_initials }}</div>
+            </div>
+            <div id="player_row" class="center-general">
+              <div id="player_rank" class="glow-text-medium  padding-20px">{{ rank }}</div>
+            </div>
+            <div class="center-general">
+              <button id="save-score" class="green-push-arcade-toggle-hidden" type="save-score">
+                Save Score ↵
+              </button>
+              <button id="start-over" class="green-push-arcade-toggle-hidden" type="start-over">
+                New Game ↵
+              </button>
+            </div>
+            
+          <div id="score-saved" class="center-general-toggle-hidden hidden">
+            <div class="center-general">
+              <p class="glow-text">Score Saved</p>
+            </div>
+          </div>
+        </div>
+      </form>
+      </div>
+      </div>
+      <!-- game over end -->
+      </div>
+    </div>
+
+    <div class="detail-box">
+      <div class="form-wrapper">
+        <div class="form-content-arcade btn-box-general">
+          <h2_bold_white class="btn-box-general glow-text">High Scores</h2_bold_white> 
+          <table class="arcade-text" role="presentation" width="100%" cellpadding="10" style="background: transparent; border: none; outline: none; color:#87E02C; border-radius: 5px; text-align: center; ">
+            <tr>
+                <td><b>Rank</b></td>
+                <td><b>Score</b></td>
+                <td><b>Name</b></td>
+            </tr>
+            <tr>
+              <td>1st</td> 
+              <td id="1st-place-score">{{score}}</td>
+              <td id="1st-place-initials">{{initials}}</td>
+          </tr>
+          <tr>
+            <td>2nd</td>
+            <td id="2nd-place-score">{{score}}</td>
+            <td id="2nd-place-initials">{{initials}}</td>
+          </tr>
+          <tr>
+              <td>3rd</td>
+              <td id="3rd-place-score">{{score}}</td>
+              <td id="3rd-place-initials">{{initials}}</td>
+          </tr>
+          <tr>
+            <td>4th</td>
+            <td id="4th-place-score">{{score}}</td>
+            <td id="4th-place-initials">{{initials}}</td>
+        </tr>
+        <tr>
+          <td>5th</td>
+          <td id="5th-place-score">{{score}}</td>
+          <td id="5th-place-initials">{{initials}}</td>
+        </tr>
+        <tr>
+          <td>6th</td>
+          <td id="6th-place-score">{{score}}</td>
+          <td id="6th-place-initials">{{initials}}</td>
+        </tr>
+        <tr>
+          <td>7th</td>
+          <td id="7th-place-score">{{score}}</td>
+          <td id="7th-place-initials">{{initials}}</td>
+        </tr>
+        <tr>
+          <td>8th</td>
+          <td id="8th-place-score">{{score}}</td>
+          <td id="8th-place-initials">{{initials}}</td>
+        </tr>
+        <tr>
+          <td>9th</td>
+          <td id="9th-place-score">{{score}}</td>
+          <td id="9th-place-initials">{{initials}}</td>
+        </tr>
+        <tr>
+          <td>10th</td>
+          <td id="10th-place-score">{{score}}</td>
+          <td id="10th-place-initials">{{initials}}</td>
+        </tr>
+            
+        </table>
+        </div>
+        <p></p>
+      </div>
+  </div>
+</div>
+  
+{% include "italian_practice/italian_footer.html" %} 

@@ -1,0 +1,106 @@
+<!-- info section -->
+{% load static %}
+<section id="nav_untrigger" class="black_override info_section">
+    <div class="info_container layout_padding-top">
+      <div class="container">
+        <div class="info_top">
+          <div class="info_logo">
+            <img src="{% static 'images/ia_logo_small.png' %}" alt="" />
+            <span style="font-family: 'Karmatic Arcade'; font-size: .75em;">
+              Italian Arcade
+            </span>
+          </div>
+        </div>
+
+        <div class="info_main">
+          <div class="row_justify_space">
+            <div class="col-md-3 col-lg-2">
+              <div class="info_link-box">
+                <h5>
+                  Practice
+                </h5>
+                <ul>
+                  <li class=" active">
+                    <a class="" href="/italian_conjugation">Conjugation Game<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="active">
+                    <a class="" href="/under_construction">Pronoun Game<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="active">
+                    <a class="" href="/under_construction">Vocabulary Game<span class="sr-only">(current)</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div id="question_form" class="col-md-3  offset-lg-1">
+              <div class="info_form ">
+                <h5>
+                  Leave a comment
+                </h5>
+                <form id="emailForm" action="/send_email_italian" method="post">
+                    {% csrf_token %}
+                  <textarea style="max-length: 500; height: 75px; width: 100%;resize: none;" type="question" name="question"></textarea>
+                  <p></p>
+                  <input type="email" name="email" placeholder="Your Contact Email">
+                  <button type="submit">
+                    Submit
+                  </button>
+                </form>
+                <div id="emailMessage" style="margin-top: 20px;"></div>           
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-9 col-md-10 mx-auto">
+            <div class="info_contact layout_padding2">
+              <div class="row">
+                <div class="col-md-3">
+                  <a href="#" class="link-box">
+                    <div class="img-box">
+                      <img src="{% static 'images/location.png' %}" alt="">
+                    </div>
+                    <div class="detail-box">
+                      <h6>
+                        Manhattan, NYC
+                      </h6>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-4">
+                  <a href="#" class="link-box">
+                    <div class="img-box">
+                      <img src="{% static 'images/mail.png' %}" alt="">
+                    </div>
+                    <div class="detail-box">
+                      <h6>
+                        gable@codedbygable.com
+                      </h6>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- end info section -->
+
+
+  <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+  <script src="{% static 'js/custom.js' %}"></script>
+  <script src="{% static 'js/popup_overlay_italian.js' %}"></script>
+  <script src="{% static 'js/check_answer.js' %}"></script>
+  <script src="{% static 'js/scroll_detect.js' %}"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,388 @@
+@media (max-width: 1120px) {}
+
+
+@media (max-width: 992px) {
+
+  .portal-main {
+    margin: 10px 10px 10px 10px;
+    color: #fff;     
+    flex: 1; /* Main content takes the remaining width (80%) */            
+    border: 2px solid #fff;  
+    border-radius: 20px;  
+    background-color: #0084EF; /* Background color for main content */
+    padding: 20px;         /* Optional: add padding */
+  }
+
+  .blue_background_rounded {
+    background-color: #0084EF;
+    border: #0084EF;
+    border-radius: 20px;
+    padding: 20px;
+  }
+
+  .navbar-toggler-icon {
+    background-image: url(../images/menu.png);
+    background-size: 30px;
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  .hero_area {
+    height: auto;
+  }
+
+  .portal-sidebar {
+    display: none;
+  }
+
+  .wide-screen-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: grid;
+  }
+
+  #navbarSupportedContent {
+    opacity: 1;
+    transform: none;
+    margin-top: 15px;
+  }
+
+  .header_section .user_option {
+    display: none;
+  }
+
+  .custom_menu-btn {
+    display: none;
+  }
+
+  .navbar-nav {
+    align-items: center;
+  }
+
+  .custom_nav-container .navbar-toggler {
+    margin-left: auto;
+  }
+
+  .custom_nav-container {
+    padding: 15px 0;
+    height: auto;
+  }
+
+  .slider_section {
+    padding-top: 10px;
+    padding-bottom: 120px;
+    /* transform: scale(0.55); */
+  }
+
+  .info_section .info_contact .link-box .img-box {
+    margin-right: 8px;
+  }
+
+  .hero_area {
+    background: none;
+    background-color: #0084EF;
+  }
+
+  .slider_section {
+    text-align: center;
+    padding-bottom: 0;
+  }
+
+  .slider_section .detail-box {
+    margin-bottom: 75px;
+  }
+
+  .slider_section .detail-box .btn-box {
+    justify-content: center;
+    margin: 20px -5px 0 -5px;
+  }
+
+
+  .img-container {
+    padding: 0;
+    height: 50%;
+  }
+
+  .slider_section .img-container .img-box {
+    transform: scale(0.95);
+    background-color: #0084EF;
+  }
+
+  .experience_section .img-box {
+    transform: scale(0.85);
+    margin: 0;
+
+  }
+
+  .category_section .category_container .box {
+    flex-basis: 34%;
+  }
+
+  .client_section .detail-box {
+    margin: 25px;
+    padding: 45px 25px 35px 25px;
+  }
+
+  .client_section .carousel-control-prev,
+  .client_section .carousel-control-next {
+    top: 92%;
+  }
+
+  .info_section .info_top .social_box {
+    margin-top: 35px;
+  }
+
+  .info_section .row>div {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 25px;
+
+  }
+
+  .info_section .info_contact .link-box {
+    margin: 0;
+  }
+  
+  .portal-sidebar {
+    display: none;
+  }
+
+}
+
+
+@media (max-width: 576px) {
+  .retro-grid {
+    background-color: #000000d2;
+    background-image: 
+        linear-gradient(to right, #86e02c70 1px, transparent 1px),
+        linear-gradient(to bottom, #86e02c70 1px, transparent 1px);
+    background-size: 40px 40px;
+    position: relative;
+    box-shadow: none; 
+    border-radius: 0;
+  }
+
+  game_font {
+    font-family: 'Karmatic Arcade';
+    /* font-family: 'Bubble Comics'; */
+    font-size:20px;
+    color: #87E02C;
+    /* color: #98da00; */
+    /* color: #0084EF; */
+  }
+
+  .portal-main {
+    margin: 10px 10px 10px 10px;
+    color: #fff;     
+    flex: 1; /* Main content takes the remaining width (80%) */            
+    border: 2px solid #fff;  
+    border-radius: 20px;  
+    background-color: #0084EF; /* Background color for main content */
+    padding: 20px;         /* Optional: add padding */
+  }
+
+  .category_section .category_container {
+    justify-content: center;
+  }
+
+  .category_section .category_container .box {
+    flex-basis: 52%;
+  }
+
+  .portal-sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .retro-grid {
+    background-color: #000000d2;
+    background-image: 
+        linear-gradient(to right, #86e02c70 1px, transparent 1px),
+        linear-gradient(to bottom, #86e02c70 1px, transparent 1px);
+    background-size: 40px 40px;
+    box-shadow: none; 
+    border-radius: 0;
+    position: relative;
+  }
+  
+
+  .portal-sidebar {
+    display: none;
+  }
+
+  .portal-main {
+    margin: 10px 10px 10px 10px;
+    color: #fff;     
+    flex: 1; /* Main content takes the remaining width (80%) */            
+    border: 2px solid #fff;  
+    border-radius: 20px;  
+    background-color: #0084EF; /* Background color for main content */
+    padding: 20px;         /* Optional: add padding */
+  }
+}
+
+@media (max-width: 420px) {
+  .retro-grid {
+    background-color: #000000d2;
+    background-image: 
+        linear-gradient(to right, #86e02c70 1px, transparent 1px),
+        linear-gradient(to bottom, #86e02c70 1px, transparent 1px);
+    background-size: 40px 40px;
+    position: relative;
+    box-shadow: none; 
+    border-radius: 0;
+  }
+  
+
+  game_font {
+    font-family: 'Karmatic Arcade';
+    /* font-family: 'Bubble Comics'; */
+    font-size:20px;
+    color: #87E02C;
+    /* color: #98da00; */
+    /* color: #0084EF; */
+  }
+
+  .portal-main {
+    margin: 10px 10px 10px 10px;
+    color: #fff;     
+    flex: 1; /* Main content takes the remaining width (80%) */            
+    border: 2px solid #fff;  
+    border-radius: 20px;  
+    background-color: #0084EF; /* Background color for main content */
+    padding: 20px;         /* Optional: add padding */
+  }
+  
+  .info_section .info_top .info_logo img {
+    width: 45px;
+    margin: auto;
+  }
+
+  .info_section .info_top .info_logo span {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: auto;
+  }
+  
+
+  .client_section .detail-box {
+    margin: 25px 5px;
+    box-shadow: 0px 0px 2px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .slider_section .carousel_btn-container {
+
+    width: 100px;
+  }
+
+  .slider_section .carousel_btn-container .carousel-control-prev,
+  .slider_section .carousel_btn-container .carousel-control-next {
+    width: 45px;
+    height: 45px;
+    background-size: 12px;
+  }
+
+  .slider_section ol.carousel-indicators {
+    right: 0;
+  }
+
+  .client_section .carousel-control-prev,
+  .client_section .carousel-control-next {
+
+    top: 95%;
+
+  }
+
+  .portal-sidebar {
+    display: none;
+  }
+
+  .client_section .carousel-control-prev,
+  .client_section .carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background-size: 8px;
+  }
+
+  .freelance_section .tab_container .t-link-box .detail-box h3 {
+    font-size: 22px;
+  }
+
+  .blue_background_rounded {
+    background-color: #0084EF;
+    border: #0084EF;
+    border-radius: 20px;
+    padding: 20px;
+  }
+
+  .navbar-toggler-icon {
+    background-image: url(../images/menu.png);
+    background-size: 15px;
+    width: 1.5em;
+    height: 1.5em;
+  }
+  
+}
+
+@media (max-width: 360px) {
+  .hero_area {
+    /* height: calc(100vh - 20px); */
+    height: auto;
+  }
+
+  .portal-sidebar {
+    display: none;
+  }
+
+  .portal-main {
+    margin: 10px 10px 10px 10px;
+    color: #fff;     
+    flex: 1; /* Main content takes the remaining width (80%) */            
+    border: 2px solid #fff;  
+    border-radius: 20px;  
+    background-color: #0084EF; /* Background color for main content */
+    padding: 20px;         /* Optional: add padding */
+  }
+
+  .blue_background_rounded {
+    background-color: #0084EF;
+    border: #0084EF;
+    border-radius: 20px;
+    padding: 20px;
+  }
+
+  game_font {
+    font-family: 'Karmatic Arcade';
+    /* font-family: 'Bubble Comics'; */
+    font-size:20px;
+    color: #87E02C;
+    /* color: #98da00; */
+    /* color: #0084EF; */
+  }
+
+  .retro-grid {
+    background-color: #000000d2;
+    background-image: 
+        linear-gradient(to right, #86e02c70 1px, transparent 1px),
+        linear-gradient(to bottom, #86e02c70 1px, transparent 1px);
+    background-size: 40px 40px;
+    position: relative;
+    box-shadow: none; 
+    border-radius: 0;
+  }
+  
+}
+
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
